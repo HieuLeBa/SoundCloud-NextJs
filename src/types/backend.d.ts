@@ -55,4 +55,13 @@ declare global {
         access_token: string
         refresh_token: string
     }
+
+    interface IShareTrack extends ITrackTop {
+        isPlaying: boolean
+    }
+
+    interface ITrackContext {
+        currentTrack: IShareTrack
+        setCurrentTrack: (v: IShareTrack) => void
+    }
 }
